@@ -11,7 +11,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import darkshadow.mof.lib.Ref;
 import darkshadow.mof.proxy.CommonProxy;
 
-@Mod(modid = Ref.MOD_ID, name = Ref.MOD_NAME, version = Ref.VERSION)
+@Mod(modid=Ref.MOD_ID, name=Ref.MOD_NAME, version=Ref.VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class MoFood {
 
