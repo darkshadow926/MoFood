@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MOF",
+  "name": "DarkShadow's Mo' Food Mod",
+  "description": "Adds the culinary arts to Minecraft",
+  "version": "0.1",
+  "url": "www.github.com/darkshadow926/MoFood",
+  "updateUrl": "",
+  "authorList": ["DarkShadow926", "Cortfrey"],
+  "credits": "",
+  "logoFile": "/assets/mof/textures/logo/OStuff.png",
+  "screenshots": [  ],
+  "parent":"",
+  "dependencies": [  ]
+}
+]
