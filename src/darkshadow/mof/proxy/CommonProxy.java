@@ -2,7 +2,11 @@ package darkshadow.mof.proxy;
 
 public class CommonProxy {
 
-  public void registerRenderers() {
-    // Nothing here as the server doesn't render graphics!
+  public void initSounds() {
+    // No sound on server
+  }
+
+  public void initRenderers() {
+    // No graphics on server
   }
 }
