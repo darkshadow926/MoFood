@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import darkshadow.mof.block.ModBlock;
 import darkshadow.mof.config.ConfigHandler;
 import darkshadow.mof.item.ModItem;
 import darkshadow.mof.lib.ModInfo;
@@ -36,10 +37,11 @@ public class MoFood {
 
     // Parse Config File
     File ConfigFile = new File(event.getModConfigurationDirectory(),
-        ModInfo.CONFIG_FILE + ".cfg");
+        ModInfo.CONFIG_FILE + ".cfg"); 
     ConfigHandler.init(ConfigFile);
 
     ModItem.init();
+    ModBlock.init();
 
     proxy.initSounds();
     proxy.initRenderers();
@@ -51,7 +53,10 @@ public class MoFood {
 
     ModItem.addNames();
     ModItem.addRecipes();
-  }
+
+    ModBlock.addNames();
+    ModBlock.addRecipes();
+}
 
   @EventHandler
   public void ModsLoaded(FMLPostInitializationEvent event) {

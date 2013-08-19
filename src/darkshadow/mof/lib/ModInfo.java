@@ -16,5 +16,7 @@ public class ModInfo {
   public static final String MOD_ID_LC = "mof";
   public static final String PROXY_LOC = ModInfo.ME_LC + "."
       + ModInfo.MOD_ID_LC + ".proxy";
+  
+  public static final String TEXTURE_LOC = ModInfo.MOD_ID_LC;
 
 }

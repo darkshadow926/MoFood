@@ -32,5 +32,6 @@ public class ItemPot extends Item {
   public void addInformation(ItemStack itemstack, EntityPlayer player,  List info, boolean useExtraInfo) {
     info.add("This fun thing has been used " + itemstack.getItemDamage() + " times");
   }
-
+  
+  
 }

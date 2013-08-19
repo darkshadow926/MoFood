@@ -14,7 +14,7 @@ public class ModItem {
       .setCreativeTab(CreativeTabs.tabTools)
       .setMaxStackSize(1)
       .setUnlocalizedName(ItemInfo.POT_UNLOCALIZED_NAME)
-      .func_111206_d(ModInfo.MOD_ID_LC+":"+ItemInfo.POT_ICON);
+      .func_111206_d(ModInfo.TEXTURE_LOC+":"+ItemInfo.POT_ICON);
   
   public static void init() {
     // Call to initalize public static items above
