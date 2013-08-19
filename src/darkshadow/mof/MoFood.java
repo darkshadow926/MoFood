@@ -3,14 +3,15 @@ package darkshadow.mof;
 import java.io.File;
 
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import darkshadow.mof.config.ConfigHandler;
+import darkshadow.mof.item.ModItem;
 import darkshadow.mof.lib.ModInfo;
 import darkshadow.mof.network.PacketHandler;
 import darkshadow.mof.proxy.CommonProxy;
@@ -32,12 +33,14 @@ public class MoFood {
   public void preInit(FMLPreInitializationEvent event) {
     // Define sounds, textures, items, blocks, take IDs, read config,
     // things other mods may care about
-    
+
     // Parse Config File
-    File ConfigFile = new File(event.getModConfigurationDirectory(),ModInfo.CONFIG_FILE+".cfg");
+    File ConfigFile = new File(event.getModConfigurationDirectory(),
+        ModInfo.CONFIG_FILE + ".cfg");
     ConfigHandler.init(ConfigFile);
-    System.out.println(ConfigHandler.SOME_TEXT_VALUE);
-    
+
+    ModItem.init();
+
     proxy.initSounds();
     proxy.initRenderers();
   }
@@ -45,6 +48,9 @@ public class MoFood {
   @EventHandler
   public void load(FMLInitializationEvent event) {
     // Setup this mod, recipes, setup connections, handlers, prepare data
+
+    ModItem.addNames();
+    ModItem.addRecipes();
   }
 
   @EventHandler
